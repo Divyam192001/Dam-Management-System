@@ -10,10 +10,12 @@ $d = $_POST['password'];
 
 
   //do your write to the database filename and other details   
-$sql = "INSERT INTO admin (id,name,email,username,password) VALUES (:a,:k,:b,:c,:d)";
-$q = $db->prepare($sql);
-$q->execute(array(':a'=>$a,':k'=>$k,':b'=>$b,':c'=>$c,':d'=>$d));
+$sql = "INSERT INTO admin (id,name,email,username,password) VALUES ('$a','$k','$b','$c','$d')";
+
+mysqli_query($con, $sql);
+
+//$q = $db->prepare($sql);
+//$q->execute(array(':a'=>$a,':k'=>$k,':b'=>$b,':c'=>$c,':d'=>$d));
 header("location: admin.php");
 
-	
 ?>
