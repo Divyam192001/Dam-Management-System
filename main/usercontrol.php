@@ -138,7 +138,7 @@ window.onload=startclock;
 			
 		
 				<div style="text-align:center;">
-			Total Number of Controls:  <font color="green" style="font:bold 22px 'Aleo';">[<?php echo $rowcount;?>]</font>
+			Total Number of Controls:  <font color="green" style="font:bold 22px 'Aleo';">[<?php echo $nums;?>]</font>
 			</div>
 		
 			
@@ -163,11 +163,16 @@ window.onload=startclock;
 	</thead>
 	<body>
 		
-			<?php
+	<?php
 			
-				{
-				
-			?>
+			include('../connect.php');
+			$selectquery = "select * from control";
+			$query = mysqli_query($con,$selectquery);
+			$nums = mysqli_num_rows($query);
+			while($row = mysqli_fetch_array($query))
+			{
+			
+		?>
 		
 			
 			<td> <?php echo $row['name']; ?></td>
@@ -175,7 +180,7 @@ window.onload=startclock;
 			<td><?php echo $row['outflow']; ?></td>
 			<td><?php echo $row['reserved']; ?></td>
 			<td><?php echo $row['electricity']; ?></td>
-			<td><?php echo $row['Description']; ?></td>
+			<td><?php echo $row['description']; ?></td>
 			<td><a title="Click to edit the WaterControl" href="editcontrol.php?id=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-edit"></i> Edit</button> </a>
 
 			<a title="Click to view the Control" href="usercontrolview.php?name=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>

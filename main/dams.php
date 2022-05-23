@@ -149,6 +149,7 @@ window.onload=startclock;
 <a href="adddams.php"><Button type="submit" class="btn btn-info" style="float:right; width:230px; height:35px;" /><i class="icon-plus-sign icon-large"></i> Add DAMS</button></a><br><br>
 <table class="hoverTable" id="resultTable" data-responsive="table" style="text-align: left;">
 	<thead>
+  
 		<tr>
 			
 			<th width="10%"> DAM ID </th>
@@ -162,20 +163,32 @@ window.onload=startclock;
 	</thead>
 	<tbody>
 	
-	
+	<?php
+			
+			include('../connect.php');
+			$selectquery = "select * from dam";
+			$query = mysqli_query($con,$selectquery);
+			$nums = mysqli_num_rows($query);
+			while($row = mysqli_fetch_array($query))
+			{
+			
+		?>
 					
-			<td> $row['id']; </td>	
+			<td><?php echo $row['id'];?> </td>	
 						
-			<td> 	 $row['name']; </td>
-			<td> $row['type']; </td>
-			<td> $row['year']; </td>
-				<td> $row['place']; </td>
+			<td> 	<?php echo $row['name'];?> </td>
+			<td> <?php echo $row['type']; ?></td>
+			<td><?php echo $row['year']; ?></td>
+				<td><?php echo $row['place'];?> </td>
 			<td><a title="Click to view the DAM" href="viewdams.php?id= $row['id']; "><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
 			<a  title="Click to edit the DAM" href="editdams.php?id=$row['id']; "><button class="btn btn-warning btn-mini"><i class="icon-edit"></i> Edit</button> </a>
 			<a  href="#" id="<?php echo $row['id']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
 			</tr>
 		
-		
+		<?php
+      }
+
+      ?>
 		
 	</tbody>
 </table>

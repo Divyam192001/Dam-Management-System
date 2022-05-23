@@ -1,7 +1,3 @@
-<?php
-session_start();
-include('../connect.php');
-?>
 <html>
 <head>
 <title>
@@ -146,7 +142,7 @@ window.onload=startclock;
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <center><h4><i class="icon-edit icon-large"></i> DAM Information</h4></center>
 <hr>
-<center><img src="../uploads/<?php echo $path['file'];?>" class="roundimage2"  alt=""/>
+<center><img src="../uploads/<?php echo $row['file'];?>" class="roundimage2"  alt=""/>
 <br><br>
 
 <table>
@@ -156,7 +152,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['id']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['id']; ?></td>
 </tr>
 <tr>
 <td> DAM Name :  </td>
@@ -164,7 +160,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['name']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['name']; ?></td>
 </tr>
 <tr>
 <td> Type :  </td>
@@ -172,7 +168,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['type']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['type']; ?></td>
 </tr>
 <tr>
 <td> Date of Build:  </td>
@@ -180,7 +176,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['year']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['year']; ?></td>
 </tr>
 <tr>
 <td> Capacity Storage :  </td>
@@ -188,7 +184,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['capacity']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['capacity']; ?></td>
 </tr>
 <tr>
 <td> Place:  </td>
@@ -196,7 +192,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['place']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['place']; ?></td>
 </tr>
 <tr>
 <td> Built Under :  </td>
@@ -204,7 +200,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $_POST['built']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['built']; ?></td>
 </tr>
 
 

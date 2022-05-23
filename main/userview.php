@@ -163,11 +163,16 @@ window.onload=startclock;
 	</thead>
 	<tbody>
 		
-			<?php
+	<?php
 			
-				{
-				
-			?>
+			include('../connect.php');
+			$selectquery = "select * from user";
+			$query = mysqli_query($con,$selectquery);
+			$nums = mysqli_num_rows($query);
+			while($row = mysqli_fetch_array($query))
+			{
+			
+		?>
 		
 
 			<td> <?php echo $row['id']; ?></td>

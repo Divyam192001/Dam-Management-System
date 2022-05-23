@@ -163,24 +163,31 @@ window.onload=startclock;
 	<tbody>
 		
 			
+  <?php
 			
-				{
-				
+			include('../connect.php');
+			$selectquery = "select * from admin";
+			$query = mysqli_query($con,$selectquery);
+			$nums = mysqli_num_rows($query);
+			while($row = mysqli_fetch_array($query))
+			{
+			
+		?>
 			
 		
-<td>$row['id']; ?></td>
-			<td>  $row['name']; ?></td>
-			<td>  $row['email']; ?></td>
-			<td>  $row['username']; ?></td>
-			<td>  $row['password']; ?></td>
+<td><?php echo $row['id']; ?></td>
+			<td> <?php echo $row['name']; ?></td>
+			<td> <?php echo $row['email']; ?></td>
+			<td> <?php echo $row['username']; ?></td>
+			<td> <?php echo $row['password']; ?></td>
 			
 			<td>
 			<a  title="Click to edit the admin" href="editadmin.php?id=<?php echo $row['id']; ?>"><button class="btn btn-warning btn-mini"><i class="icon-edit"></i> Edit</button> </a>
 			<a  href="#" id="<?php echo $row['id']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
 			</tr>
-			
+			<?php
 				}
-			
+			?>
 		
 		
 		

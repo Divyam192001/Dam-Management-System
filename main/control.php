@@ -161,15 +161,24 @@ window.onload=startclock;
 	</thead>
 	<body>
 		
+  <?php
 			
+			include('../connect.php');
+			$selectquery = "select * from control";
+			$query = mysqli_query($con,$selectquery);
+			$nums = mysqli_num_rows($query);
+			while($row = mysqli_fetch_array($query))
+			{
+			
+		?>
 		
 
-			<td>  $row['name']; ?></td>
-			<td>  $row['inflow']; ?></td>
-			<td>  $row['outflow']; ?></td>
-			<td>  $row['reserved']; ?></td>
-			<td>  $row['electricity']; ?></td>
-			<td>  $row['description']; ?></td>
+			<td> <?php echo $row['name']; ?></td>
+			<td> <?php echo $row['inflow']; ?></td>
+			<td> <?php echo $row['outflow']; ?></td>
+			<td> <?php echo $row['reserved']; ?></td>
+			<td> <?php echo $row['electricity']; ?></td>
+			<td> <?php echo $row['description']; ?></td>
 			
 			<td>
 
@@ -178,7 +187,9 @@ window.onload=startclock;
 			</tr>
 			
 				
-		
+		<?php
+      }
+      ?>
 		
 		
 		
