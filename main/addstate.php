@@ -147,7 +147,7 @@ window.onload=startclock;
 
 <div >
 
-<button class="btn btn-success btn-block btn-large" style="width:267px;"><i class="icon icon-save icon-large"></i> Save DAM</button>
+<button class="btn btn-success btn-block btn-large" style="width:267px;"><i class="icon icon-save icon-large"></i> Add State</button>
 </div>
 </div>
 </form>

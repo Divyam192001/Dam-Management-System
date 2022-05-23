@@ -15,10 +15,14 @@ $b = $_POST['dno'];
 
 
   //do your write to the database filename and other details   
-$sql = "INSERT INTO state (id,name,dno) VALUES (:a,:k,:b)";
-$q = $db->prepare($sql);
-$q->execute(array(':a'=>$a,':k'=>$k,':b'=>$b));
+$sql = "INSERT INTO state (id,name,dno) VALUES ('$a','$k','$b')";
+
+//$q = $con->prepare($sql);
+//$q->execute(array(':a'=>$a,':k'=>$k,':b'=>$b));
+
+mysqli_query($con, $sql);
 header("location: state.php");
 
 	
+
 ?>

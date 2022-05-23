@@ -162,19 +162,19 @@ window.onload=startclock;
 	<tbody>
 		
 			<?php
-			
+      
 				{
 				
 			?>
 		
-<td> $row['id']; ?></td>
-			<td>  $row['name']; ?></td>
+<td><?php echo $row['id']; ?></td>
+			<td> <?php echo $row['name']; ?></td>
 			<td> <?php echo $row['dno']; ?></td>
 			
 			
-			<td><a title="Click to view the State" href="viewstate.php?id=<?php echo $row['id']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
-			<a  title="Click to edit the State" href="editstate.php?id=<?php echo $row['id']; ?>"><button class="btn btn-warning btn-mini"><i class="icon-edit"></i> Edit</button> </a>
-			<a  href="#" id="<?php echo $row['id']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
+			<td><a title="Click to view the State" href="viewstate.php?id=<?php echo $_POST['id']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
+			<a  title="Click to edit the State" href="editstate.php?id=<?php echo $_POST['id']; ?>"><button class="btn btn-warning btn-mini"><i class="icon-edit"></i> Edit</button> </a>
+			<a  href="#" id="<?php echo $_POST['id']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
 			</tr>
 			<?php
 				}

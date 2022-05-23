@@ -149,16 +149,14 @@ window.onload=startclock;
 	<option>Small</option>
 </select><br>
 
-<span>DAM Name : </span><select type="text" name="name" style="width:265px; height:30px;" required>
-							
-							</select></font><br>
+<span>DAM Name : </span><input type="text" name="name" style="width:265px; height:30px;" required><br>
 					
 
 <span>Ratio_Inflow : </span><input type="text" style="width:265px; height:30px;"  name="inflow" Required /><br>
 <span>Ratio_Outflow: </span><input type="text" style="width:265px; height:30px;" name="outflow" required /><br>
 
 <span>Electricity</span><input type="text" style="width:265px; height:30px;" name="electricity" required /><br>
-<span>Description: </span><input type="text" style="width:265px; height:30px;" name="Description" required /><br>
+<span>Description: </span><input type="text" style="width:265px; height:30px;" name="description" required /><br>
 <div >
 	
 					

@@ -161,7 +161,7 @@ window.onload=startclock;
 			<th width="15%"> Action </th>
 		</tr>
 	</thead>
-	<tbody>
+	<body>
 		
 			<?php
 			
@@ -176,8 +176,10 @@ window.onload=startclock;
 			<td><?php echo $row['reserved']; ?></td>
 			<td><?php echo $row['electricity']; ?></td>
 			<td><?php echo $row['Description']; ?></td>
-			<td><a title="Click to view the Control" href="usercontrolview.php?name=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
-			
+			<td><a title="Click to edit the WaterControl" href="editcontrol.php?id=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-edit"></i> Edit</button> </a>
+
+			<a title="Click to view the Control" href="usercontrolview.php?name=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
+				</td>
 			
 			</tr>
 			<?php
