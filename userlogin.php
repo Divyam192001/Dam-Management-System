@@ -23,7 +23,7 @@
             if($user_data["password"] === $password)
             {
               $_SESSION['user_id']= $user_data['user_id'];
-              header("location: main/index.php");
+              header("location: main/user.php");
               die;
             }
         }

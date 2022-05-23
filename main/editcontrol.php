@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>
@@ -147,13 +148,14 @@ window.onload=startclock;
 <div id="ac">
 <input type="hidden" name="memi" value="<?php echo $name; ?>" />
 
-<span>DAM Name : </span><input type="text" style="width:265px; height:30px;"  name="name" value="<?php echo $row['name']; ?>" Readonly Required /><br>
-<span>Ratio_Inflow : </span><input type="text" style="width:265px; height:30px;"  name="inflow" value="<?php echo $row['inflow']; ?>" Required /><br>
-<span>Ratio_Outflow: </span><input type="text" style="width:265px; height:30px;"  name="outflow" value="<?php echo $row['outflow']; ?>" Required /><br>
-<span>Reserved : </span><input type="text" style="width:265px; height:30px;"  name="reserved" value="<?php echo $row['reserved']; ?>" Readonly /><br>
-<span>Electricity : </span><input type="text" style="width:265px; height:30px;"  name="electricity" value="<?php echo $row['electricity']; ?>" Required /><br>
-<span>Description : </span><input type="text" style="width:265px; height:30px;"  name="Description" value="<?php echo $row['Description']; ?>" Required /><br>
+<span>DAM Name : </span><input type="text" style="width:265px; height:30px;"  name="name"  Readonly Required /><br>
+<span>Ratio_Inflow : </span><input type="text" style="width:265px; height:30px;"  name="inflow" Required /><br>
+<span>Ratio_Outflow: </span><input type="text" style="width:265px; height:30px;"  name="outflow"  Required /><br>
+<span>Reserved : </span><input type="text" style="width:265px; height:30px;"  name="reserved"  Readonly /><br>
+<span>Electricity : </span><input type="text" style="width:265px; height:30px;"  name="electricity"  Required /><br>
+<span>Description : </span><input type="text" style="width:265px; height:30px;"  name="description" Required /><br>
 	
+
 
 <div >
 

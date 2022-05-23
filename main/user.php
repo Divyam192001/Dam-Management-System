@@ -63,7 +63,9 @@ window.onload=startclock;
 // End -->
 </SCRIPT>	
 </head>
+<?php include('navfixed1.php');?>
 <body style=" background:url(img/1.gif); background-size:cover;">
+
 <?php 
  {
 ?>
