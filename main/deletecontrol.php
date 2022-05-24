@@ -1,7 +1,7 @@
 <?php
 	include('../connect.php');
-	$name=$_GET['name'];
-	$deletquery ="DELETE FROM control WHERE name=$name";
+	$id=$_GET['id'];
+	$deletquery ="DELETE FROM user WHERE id=$id";
 	$query= mysqli_query($con,$deletquery);
 	// $result->execute();
 	
