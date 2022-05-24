@@ -137,8 +137,16 @@ window.onload=startclock;
 <a  href="usercontrol.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 
 <?php
-	{
-?>
+			
+			include('../connect.php');
+			//$ids = $_GET['id'];
+			$selectquery = "select * from control ";
+			$query = mysqli_query($con,$selectquery);
+			$nums = mysqli_num_rows($query);
+			while($row = mysqli_fetch_array($query))
+			{
+			
+		?>
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <center><h4><i class="icon-edit icon-large"></i> DAM Control Information</h4></center>
 <hr>
@@ -194,7 +202,7 @@ window.onload=startclock;
 				border-top: 1px solid #fafafa;
 				background-color: #f4f4f4;
 				text-align: center;
-				color: #7d7d7d;"> <?php echo $row['Description']; ?></td>
+				color: #7d7d7d;"> <?php echo $row['description']; ?></td>
 </tr>
 
 

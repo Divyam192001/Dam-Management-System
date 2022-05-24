@@ -146,7 +146,6 @@ window.onload=startclock;
 <span>PhoneNumber:</span><input type="text" style="width:265px; height:30px;"  name="number" placeholder="Mobile Number" minlength="10" maxlength="10" Required /><br>
 <span>Username : </span><input type	="text" style="width:265px; height:30px;" name="username" placeholder="Username min 4" minlength="4" maxlength="12" required /><br>
 <span>Password : </span><input type	="password" style="width:265px; height:30px;" name="password" placeholder="User Password min 4" minlength="4" maxlength="12" required /><br>
-<span>Image:</span><input type="file" name="file" id="file"  ><br><br>
 <div >
 
 <button class="btn btn-success btn-block btn-large" style="width:267px;"><i class="icon icon-save icon-large"></i> Save User</button>

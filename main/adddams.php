@@ -157,6 +157,7 @@ window.onload=startclock;
 <span>Image:</span><input type="file" name="file" id="file"  ><br><br>
 <div >
 
+
 <button class="btn btn-success btn-block btn-large" style="width:267px;"><i class="icon icon-save icon-large"></i> Save DAM</button>
 </div>
 </div>

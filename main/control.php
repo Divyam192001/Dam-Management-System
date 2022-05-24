@@ -152,7 +152,7 @@ window.onload=startclock;
 <table class="hoverTable" id="resultTable" data-responsive="table" style="text-align: left;">
 	<thead>
 		<tr>
-			
+		<th width="10%"> ID </th>
 			<th width="20%"> DAM Name </th>
 			<th width="5%"> Ratio_inflow </th>
 		    <th width="5%"> Ratio_Outflow </th>
@@ -169,7 +169,8 @@ window.onload=startclock;
   <?php
 			
 			include('../connect.php');
-			$selectquery = "select * from control";
+			//$ids = $_GET['id'];
+			$selectquery = "select * from control ";
 			$query = mysqli_query($con,$selectquery);
 			$nums = mysqli_num_rows($query);
 			while($row = mysqli_fetch_array($query))
@@ -177,7 +178,7 @@ window.onload=startclock;
 			
 		?>
 		
-
+		<td> <?php echo $row['id']; ?></td>
 			<td> <?php echo $row['name']; ?></td>
 			<td> <?php echo $row['inflow']; ?></td>
 			<td> <?php echo $row['outflow']; ?></td>
@@ -188,7 +189,7 @@ window.onload=startclock;
 			<td>
 
         <a title="Click to view the WaterControl" href="viewcontrol.php?id=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
-			<a  href="#" id="<?php echo $row['name']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
+			<a  href="#" id="<?php echo $row['id']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
 			</tr>
 			
 				

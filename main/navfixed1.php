@@ -1,3 +1,7 @@
+<html>
+<head></head>
+  <body>
+
  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -9,7 +13,8 @@
           <a class="brand" href="#"><b>DAM MANAGEMENT SYSTEM </b></a>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
-              <li><a><i class="icon-user icon-large"></i> Welcome:<strong> </strong></a></li>
+            
+              <li><a><i class="icon-user icon-large"></i> Welcome:<strong> <?php echo $_SESSION['SESS_EMAIL'];?></strong></a></li>
 			 <li><a> <i class="icon-calendar icon-large"></i>
 								<?php
 								$Today = date('y:m:d',time());
@@ -24,4 +29,5 @@
         </div>
       </div>
     </div>
-	
+</body>
+</html>
