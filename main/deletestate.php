@@ -1,8 +1,9 @@
 <?php
 	include('../connect.php');
 	$id=$_GET['id'];
-	$result = $db->prepare("DELETE FROM state WHERE id= :memid");
-	$result->bindParam(':memid', $id);
-	$result->execute();
-	header("location:state.php");
+	$deletquery ="DELETE FROM state WHERE id=$id";
+	$query= mysqli_query($con,$deletquery);
+	// $result->execute();
+	
+	header("location:userview.php");
 ?>
