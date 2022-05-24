@@ -154,6 +154,7 @@ window.onload=startclock;
 
 <span>Ratio_Inflow : </span><input type="text" style="width:265px; height:30px;"  name="inflow" Required /><br>
 <span>Ratio_Outflow: </span><input type="text" style="width:265px; height:30px;" name="outflow" required /><br>
+<span>Reserved</span><input type="text" style="width:265px; height:30px;" name="reserved" required /><br>
 
 <span>Electricity</span><input type="text" style="width:265px; height:30px;" name="electricity" required /><br>
 <span>Description: </span><input type="text" style="width:265px; height:30px;" name="description" required /><br>

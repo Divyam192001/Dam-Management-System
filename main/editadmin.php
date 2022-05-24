@@ -135,9 +135,18 @@ window.onload=startclock;
 <div style="margin-top: -19px; margin-bottom: 21px;">
 <a  href="admin.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 <center>
-  <?php
-	{
-?>
+<?php
+			
+			include('../connect.php');
+      $ids = $_GET['id'];
+			$showquery = "select * from admin where id={$ids}";
+			$showdata = mysqli_query($con,$showquery);
+		
+			$row = mysqli_fetch_array($showdata);
+			{
+			
+		?>
+
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <form action="saveeditadmin.php" method="post" enctype="multipart/form-data">
 <center><h4><i class="icon-edit icon-large"></i>  Admin</h4></center>

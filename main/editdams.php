@@ -137,16 +137,24 @@ window.onload=startclock;
 <div style="margin-top: -19px; margin-bottom: 21px;">
 <a  href="dams.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 <center>
-  <?php
-  {
-?>
+<?php
+			
+			include('../connect.php');
+      $ids = $_GET['id'];
+			$showquery = "select * from dam where id={$ids}";
+			$showdata = mysqli_query($con,$showquery);
+		
+			$row = mysqli_fetch_array($showdata);
+			{
+			
+		?>
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <form action="saveeditdams.php" method="post" enctype="multipart/form-data">
 <center><h4><i class="icon-edit icon-large"></i> Edit DAM Details</h4></center>
 <hr>
 <div id="ac">
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
-<span>DAM ID : </span><input type="text" style="width:265px; height:30px;" value="<?php echo $row['id']; ?>" Required/><br>
+<span>DAM ID : </span><input type="text" style="width:265px; height:30px;" name = "id" value="<?php echo $row['id']; ?>" Required/><br>
 
 <span>DAM Name : </span><input type="text" style="width:265px; height:30px;"  name="name" value="<?php echo $row['name']; ?>" /><br>
 
@@ -159,9 +167,9 @@ window.onload=startclock;
 	
 </select><br>
 <span>Date of Build: </span><input type	="date" style="width:265px; height:30px;" name="year" value="<?php echo $row['year']; ?>" /><br>
-<span>Capacity Storage </span><input type="text" name="capacity" style="width:265px; height:30px; margin-left:-5px;" value="<?php echo $row['capacity']; ?>" />
+<span>Capacity Storage </span><input type="text" name="capacity" style="width:265px; height:30px; margin-left:-5px;" name="capacity" value="<?php echo $row['capacity']; ?>" />
 	<br>
-<span>Place : </span><input type	="text" style="width:265px; height:30px;" value="<?php echo $row['place']; ?>" name="place" required /><br>
+<span>Place : </span><input type	="text" style="width:265px; height:30px;" name= "place" value="<?php echo $row['place']; ?>" name="place" required /><br>
 <span>Built Under : </span><textarea style="width:265px; height:50px;" name="built" ><?php echo $row['built']; ?> </textarea><br><br>
 
 <div >

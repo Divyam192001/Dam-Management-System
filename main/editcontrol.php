@@ -129,31 +129,39 @@ window.onload=startclock;
 			<i class="icon-table"></i> Water Controls
 			</div>
 			<ul class="breadcrumb">
-			<li><a href="control.php">Dashboard</a></li> /
+			<li><a href="main/user.php">Dashboard</a></li> /
 			<li class="active">Controls</li> /
 			<li class="active">Edit Controls</li>
 			</ul>
 
 
 <div style="margin-top: -19px; margin-bottom: 21px;">
-<a  href="control.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
+<a  href="usercontrol.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 <center>
-  <?php
-	{
-?>
+
+<?php  
+		include('../connect.php');
+      $ids = $_GET['id'];
+			$showquery = "select * from control where id=$ids";
+			$showdata = mysqli_query($con,$showquery);
+		
+			$row = mysqli_fetch_array($showdata);
+			{
+			
+		?>
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <form action="saveeditcontrol.php" method="post" enctype="multipart/form-data">
 <center><h4><i class="icon-edit icon-large"></i>  Controls</h4></center>
 <hr>
 <div id="ac">
-<input type="hidden" name="memi" value="<?php echo $name; ?>" />
-
-<span>DAM Name : </span><input type="text" style="width:265px; height:30px;"  name="name"  Readonly Required /><br>
-<span>Ratio_Inflow : </span><input type="text" style="width:265px; height:30px;"  name="inflow" Required /><br>
-<span>Ratio_Outflow: </span><input type="text" style="width:265px; height:30px;"  name="outflow"  Required /><br>
-<span>Reserved : </span><input type="text" style="width:265px; height:30px;"  name="reserved"  Readonly /><br>
-<span>Electricity : </span><input type="text" style="width:265px; height:30px;"  name="electricity"  Required /><br>
-<span>Description : </span><input type="text" style="width:265px; height:30px;"  name="description" Required /><br>
+<input type="hidden" name="memi" value="<?php echo $id; ?>" />
+<span>DAM ID : </span><input type="text" style="width:265px; height:30px;"  name="id" value="<?php echo $row['id']; ?>" Readonly  /><br>
+<span>DAM Name : </span><input type="text" style="width:265px; height:30px;"  name="name" value="<?php echo $row['name']; ?>" Readonly  /><br>
+<span>Ratio_Inflow : </span><input type="text" style="width:265px; height:30px;"  name="inflow" value="<?php echo $row['inflow']; ?>" Required /><br>
+<span>Ratio_Outflow: </span><input type="text" style="width:265px; height:30px;"  name="outflow" value="<?php echo $row['outflow']; ?>" Required /><br>
+<span>Reserved : </span><input type="text" style="width:265px; height:30px;"  name="reserved" value="<?php echo $row['reserved']; ?>" Required /><br>
+<span>Electricity : </span><input type="text" style="width:265px; height:30px;"  name="electricity" value="<?php echo $row['electricity']; ?>" Required /><br>
+<span>Description : </span><input type="text" style="width:265px; height:30px;"  name="description" value="<?php echo $row['description']; ?>" Required /><br>
 	
 
 

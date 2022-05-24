@@ -3,7 +3,7 @@
 include('../connect.php');
 
 // new data
-$id = $_POST['memi'];
+$ids = $_POST['id'];
 $a = $_POST['name'];
 //$h = $_POST['last_name'];
 $b = $_POST['built'];
@@ -14,11 +14,12 @@ $e = $_POST['year'];
 $g = $_POST['type'];
 // query
 
-$sql = "UPDATE dams 
-        SET name=?,built=?, capacity=?, place=?, year=?,type=?
-		WHERE id=?";
-$q = $db->prepare($sql);
-$q->execute(array($a,$b,$c,$d,$e,$g,$id));
+$sql = "update dam 
+        SET name='$a',built='$b', capacity='$c', place='$d', year='$e',type='$g'
+		WHERE id='$ids'";
+        mysqli_query($con, $sql);
+//$q = $db->prepare($sql);
+//q->execute(array($a,$b,$c,$d,$e,$g,$id));
 header("location: dams.php");
 
 ?>
