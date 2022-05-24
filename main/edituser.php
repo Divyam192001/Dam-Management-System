@@ -105,7 +105,7 @@ showtime();
 window.onload=startclock;
 // End -->
 </SCRIPT>	
-
+<?php include('navfixed.php');?>
 <body>
 
 <div class="container-fluid">

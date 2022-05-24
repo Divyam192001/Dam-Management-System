@@ -65,7 +65,7 @@ window.onload=startclock;
 </head>
 <body style=" background:url(img/1.gif); background-size:cover;">
 
-
+<?php include('navfixed.php');?>
 <!--<a href="../index.php">Logout</a>-->
 
 	<div class="container-fluid">

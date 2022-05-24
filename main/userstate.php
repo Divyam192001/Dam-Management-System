@@ -105,7 +105,7 @@ showtime();
 window.onload=startclock;
 // End -->
 </SCRIPT>	
-
+<?php include('navfixed1.php');?>
 <body>
 
 <div class="container-fluid">
@@ -136,10 +136,16 @@ window.onload=startclock;
 <div style="margin-top: -19px; margin-bottom: 21px;">
 <a  href="user.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 			
-			
+<?php
+			include('../connect.php');
+			 $sql = " SELECT count(id) as total FROM state ";
+			 $result = mysqli_query($con,$sql);
+			 $values = mysqli_fetch_assoc($result);
+			 $rowcount=$values['total'];
+		?>
 		
 				<div style="text-align:center;">
-			Total Number of States:  <font color="green" style="font:bold 22px 'Aleo';">[<?php echo $rowcount;?>]</font>
+			Total Number of States:  <font color="green" style="font:bold 22px 'Aleo';"><?php echo $rowcount;?></font>
 			</div>
 		
 			

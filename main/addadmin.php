@@ -105,7 +105,7 @@ showtime();
 window.onload=startclock;
 // End -->
 </SCRIPT>	
-
+<?php include('navfixed.php');?>
 <body>
 
 <div class="container-fluid">
@@ -138,7 +138,7 @@ window.onload=startclock;
   
 <div id="ac">
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
-<span>Admin ID: </span><input type="text" style="width:265px; height:30px;" name="id" placeholder="Admin ID" Required /><br>
+<input type="hidden" style="width:265px; height:30px;" name="id" placeholder="Admin ID" Required /><br>
 <span>Admin Name : </span><input type="text" style="width:265px; height:30px;"  name="name" placeholder="Admin Name" Required /><br>
 <span>email : </span><input type="email" style="width:265px; height:30px;"  name="email" placeholder="Admin Email" Required /><br>
 <span>Username : </span><input type	="text" style="width:265px; height:30px;" name="username" placeholder="Admin usernName" Required /><br>
