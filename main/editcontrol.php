@@ -106,7 +106,7 @@ showtime();
 window.onload=startclock;
 // End -->
 </SCRIPT>	
-
+<?php include('navfixed1.php');?>
 <body>
 
 <div class="container-fluid">
@@ -114,10 +114,10 @@ window.onload=startclock;
 	<div class="span2">
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
-              <li><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
-			<li ><a href="state.php"><i class="icon-group icon-2x"></i>States</a>  </li>
-			<li><a href="dams.php"><i class="icon-group icon-2x"></i> DAM</a>     </li>
-			<li><a href="control.php"><i class="icon-group icon-2x"></i>Water Control</a>     </li>
+              <li><a href="user.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
+			<li ><a href="userstate.php"><i class="icon-group icon-2x"></i>States</a>  </li>
+			<li><a href="userdam.php"><i class="icon-group icon-2x"></i> DAM</a>     </li>
+			<li><a href="usercontrol.php"><i class="icon-group icon-2x"></i>Water Control</a>     </li>
 			<br><br>	
 			
 				

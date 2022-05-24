@@ -102,7 +102,7 @@ showtime();
 window.onload=startclock;
 
 </SCRIPT>	
-
+<?php include('navfixed.php');?>
 <body>
 <div class="container-fluid">
       <div class="row-fluid">
@@ -110,9 +110,8 @@ window.onload=startclock;
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
               <li><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li> 
-			<li><a href="state.php"><i class="icon-group icon-2x"></i>State</a>  </li>
-			<li><a href="dams.php"><i class="icon-group icon-2x"></i>DAM</a>     </li>
-             <li class="active"><a href="control.php"><i class="icon-group icon-2x"></i>Water Control</a>
+			<li class="active"><a href="state.php"><i class="icon-group icon-2x"></i>Manage Control</a>  </li>
+			<li><a href="addcontrol.php"><i class="icon-group icon-2x"></i>Add Control</a>     </li>
 			<br><br>	
 			
 				
@@ -132,10 +131,16 @@ window.onload=startclock;
 <div style="margin-top: -19px; margin-bottom: 21px;">
 <a  href="index.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 			
-			
+<?php
+			include('../connect.php');
+			 $sql = " SELECT count(id) as total FROM control ";
+			 $result = mysqli_query($con,$sql);
+			 $values = mysqli_fetch_assoc($result);
+			 $rowcount=$values['total'];
+		?>
 		
 				<div style="text-align:center;">
-			Total Number of DAMs:  <font color="green" style="font:bold 22px 'Aleo';">[<?php echo $rowcount;?>]</font>
+			Total Number of DAMs:  <font color="green" style="font:bold 22px 'Aleo';"><?php echo $rowcount;?></font>
 			</div>
 			
 			
