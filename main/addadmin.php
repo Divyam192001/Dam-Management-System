@@ -1,4 +1,8 @@
-<html>
+
+<?php
+	session_start();
+	?>
+  <html>
 <head>
 <title>
 Model :: DAM MANAGEMENT SYSTEM

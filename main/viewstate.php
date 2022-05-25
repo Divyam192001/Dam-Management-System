@@ -1,4 +1,7 @@
-<html>
+<?php
+	session_start();
+	?>
+  <html>
 <head>
 <title>
 Model :: DAM MANAGEMENT System
@@ -105,7 +108,7 @@ showtime();
 window.onload=startclock;
 // End -->
 </SCRIPT>	
-
+<?php include('navfixed.php');?>
 <body>
 
 <div class="container-fluid">

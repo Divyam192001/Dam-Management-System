@@ -47,7 +47,7 @@ Model :: DAM MANAGEMENT SYSTEM
 	<input type="password" style="height:40px;" name="password" Placeholder="Password" required/><br>
 		</div>
 		<div class="qwe">
-		 <button class="btn btn-large btn-primary btn-block pull-right" href="dashboard.html" type="submit"><i class="icon-signin icon-large"></i> Login</button>
+		 <button class="btn btn-large btn-primary btn-block pull-right" href="dashboard.html" name="submit" type="submit"><i class="icon-signin icon-large"></i> Login</button>
 </div>
 		 </form><button class="btn btn-large btn-primary "><a href="user.php"><i class="icon-signin icon-large"></i>User Login</a></button>
 </div>

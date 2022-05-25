@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -22,7 +20,7 @@ session_start();
 								?>
 
 				</a></li>
-              <li><a href="../index.php"><font color="red"><i class="icon-off icon-large"></i></font> Log Out</a></li>
+              <li><a href="../logout.php"><font color="red"><i class="icon-off icon-large"></i></font> Log Out</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
