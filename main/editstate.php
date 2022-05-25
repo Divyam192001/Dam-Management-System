@@ -156,7 +156,7 @@ window.onload=startclock;
 <hr>
 <div id="ac">
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
-<span>State ID : </span><input type="text" style="width:265px; height:30px;"  name="id" value="<?php echo $row['id']; ?>"  Required /><br>
+<span>State ID : </span><input type="text" style="width:265px; height:30px;"  name="id" value="<?php echo $row['id']; ?>"  Readonly /><br>
 <span>State Name : </span><input type="text" style="width:265px; height:30px;"  name="name" value="<?php echo $row['name']; ?>" Required /><br>
 <span>No Of DAM : </span><input type="text" style="width:265px; height:30px;"  name="dno" value="<?php echo $row['dno']; ?>" Required /><br>
 

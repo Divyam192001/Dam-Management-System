@@ -140,7 +140,7 @@ window.onload=startclock;
 <hr><center>
 <div id="ac">
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
-<span>State ID: </span><input type="text" style="width:265px; height:30px;" name="id" placeholder="State ID" Required /><br>
+<input type="hidden" style="width:265px; height:30px;" name="id" placeholder="State ID" Required /><br>
 <span>state Name : </span><input type="text" style="width:265px; height:30px;"  name="name" placeholder="State Name" Required /><br>
 <span>No Of DAMs : </span><input type="text" style="width:265px; height:30px;"  name="dno" placeholder="DAM Count" Required /><br>
 

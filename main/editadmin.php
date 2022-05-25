@@ -153,7 +153,7 @@ window.onload=startclock;
 <hr>
 <div id="ac">
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
-<span>Admin ID : </span><input type="text" style="width:265px; height:30px;"  name="id" value="<?php echo $row['id']; ?>"  Required /><br>
+<span>Admin ID : </span><input type="text" style="width:265px; height:30px;"  name="id" value="<?php echo $row['id']; ?>"  Readonly /><br>
 <span>Admin Name : </span><input type="text" style="width:265px; height:30px;"  name="name" value="<?php echo $row['name']; ?>" Required /><br>
 <span>Admin Email : </span><input type="text" style="width:265px; height:30px;"  name="email" value="<?php echo $row['email']; ?>" Required /><br>
 <span>Username : </span><input type="text" style="width:265px; height:30px;"  name="username" value="<?php echo $row['username']; ?>" Required /><br>
