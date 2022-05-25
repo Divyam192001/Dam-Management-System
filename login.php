@@ -2,6 +2,7 @@
 	session_start();
   include("connect.php");
   include("functions.php");
+  if(isset($_POST['submit'])){
   if($_SERVER['REQUEST_METHOD']== "POST")
   {
     $username = $_POST['username'];
@@ -22,7 +23,8 @@
             
             if($user_data["password"] === $password)
             {
-              $_SESSION['user_id']= $user_data['user_id'];
+              $_SESSION['username']= $user_data['name'];
+              print_r($_SESSION);
               header("location: main/index.php");
               die;
             }
@@ -35,4 +37,5 @@
     {
       echo "Please enter some valid information";
     }
+  }
   }
