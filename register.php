@@ -70,10 +70,10 @@ s
 
 
 <form id="first_form" action="saveuser.php" method="post" enctype="multipart/form-data">
-<center><font style=" font:bold 22px 'Aleo'; color:#fff;"><i class="icon-edit icon-large"></i> Add New User	</font></center>
+<center><font style=" font:bold 22px 'Aleo'; color: 'black;"><i class="icon-edit icon-large"></i> Add New User	</font></center>
 <hr><center>
 <div id="ac">
-<div class="input-prepend"><font color="#fff">
+<div class="input-prepend"><font color: 'black'>
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
 
 <span>Name : </span><input type="text" style="width:265px; height:30px;" placeholder="User Name min 6" name="name" id="name" minlength="6" Required /><br><br>
