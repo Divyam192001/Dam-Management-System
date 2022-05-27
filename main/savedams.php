@@ -10,14 +10,23 @@ $e = $_POST['place'];
 $f = $_POST['built'];
 $file = $_FILES['file'];
 
-print_r($file);
+//print_r($file);
 $filename = $file['name'];
 $filepath = $file['tmp_name'];
 $fileerror = $file['error'];
 
 if($fileerror ==0){
   $destfile = 'uploads/'.$filename;
-  echo $destfile;
+  //echo "$destfile";
+  move_uploaded_file($filepath, $destfile);
+  $sql = "INSERT INTO dam (id,name,year,type,capacity,place,built,file) VALUES ('$a','$k','$b','$c','$d','$e','$f','$destfile')";
+  $query = mysqli_query($con, $sql);
+if($query){
+  echo "Inserted";
+}else
+{
+  echo "Not insertedd";
+}
 }
 
 // query

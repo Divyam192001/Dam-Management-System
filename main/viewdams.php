@@ -75,7 +75,7 @@ Model :: DAM MANAGEMENT System
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 <center><h4><i class="icon-edit icon-large"></i> DAM Information</h4></center>
 <hr>
-<center><img src="../uploads/<?php echo $row['file'];?>" class="roundimage2"  alt=""/>
+<center><img src="<?php echo $row['file'];?>" class="roundimage2"  alt=""/>
 <br><br>
 
 <table>
