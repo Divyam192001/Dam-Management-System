@@ -25,7 +25,7 @@ Model :: DAM MANAGEMENT SYSTEM
 
 <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body style=" background:url(img/6.gif); background-size:cover;">
+<body style=" background:url(img/1.jpg); background-size:cover;">
     <div class="container-fluid">
       <div class="row-fluid">
 		<div class="span4">

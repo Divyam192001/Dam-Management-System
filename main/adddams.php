@@ -54,7 +54,6 @@ Model :: DAM MANAGEMENT SYSTEM
 			<li class="active">Add DAM</li>
 			</ul>
 
-
 <div style="margin-top: -19px; margin-bottom: 21px;">
 <a  href="dams.php"><button class="btn btn-default btn-large" style="float: left;"><i class="icon icon-circle-arrow-left icon-large"></i> Back</button></a>
 <form action="savedams.php" method="post" enctype="multipart/form-data">

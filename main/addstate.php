@@ -26,6 +26,7 @@ Model :: DAM MANAGEMENT SYSTEM
 
 <link href="../style.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
+
 </SCRIPT>	
 <?php include('navfixed.php');?>
 <body>

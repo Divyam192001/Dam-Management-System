@@ -65,7 +65,8 @@ Model :: DAM MANAGEMENT System
 			$selectquery = "select * from control ";
 			$query = mysqli_query($con,$selectquery);
 			$nums = mysqli_num_rows($query);
-			while($row = mysqli_fetch_array($query))
+			($row = mysqli_fetch_array($query));
+			//while($row = mysqli_fetch_array($query))
 			{
 			
 		?>
