@@ -26,7 +26,7 @@ Model :: DAM MANAGEMENT SYSTEM
  
 <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body style=" background:url(img/1.jpg); background-size:cover;">
+<body style=" background:url(img/4.jpg); background-size:cover;">
     
       <div>
 
@@ -38,11 +38,11 @@ Model :: DAM MANAGEMENT SYSTEM
 <div class="input-prepend"><font color: 'black'>
 <input type="hidden" name="memi" value="<?php echo $id; ?>" />
 
-<span>Name : </span><input type="text" style="width:265px; height:30px;" placeholder="User Name min 6" name="name" id="name" minlength="6" Required /><br><br>
-<span>Mobile Number : </span><input type="text" style="width:265px; height:30px;" placeholder="Mobile Number" name="number" id="number" 
+<span><font style="font:bold 20px 'Aleo'; color: 'black;"> Name : </font></span><input type="text" style="width:265px; height:30px;" placeholder="User Name min 6" name="name" id="name" minlength="6" Required /><br><br>
+<span><font style="font:bold 20px 'Aleo'; color: 'black;">Mobile No. : </font></span><input type="text" style="width:265px; height:30px;" placeholder="Mobile Number" name="number" id="number" 
 minlength="10" maxlength="10" Required /><br><br>
-<span>Username : </span><input type	="text" style="width:265px; height:30px;" placeholder="Username min 4" name="username" minlength="4" maxlength="12" required /><br><br>
-<span>Password : </span><input type	="password" style="width:265px; height:30px;" placeholder="User Password min 4" name="password" id="password" required minlength="4" maxlength="12" /><br><br>
+<span><font style="font:bold 20px 'Aleo'; color: 'black;">Username : </font></span><input type	="text" style="width:265px; height:30px;" placeholder="Username min 4" name="username" minlength="4" maxlength="12" required /><br><br>
+<span><font style="font:bold 20px 'Aleo'; color: 'black;">Password : </font></span><input type	="password" style="width:265px; height:30px;" placeholder="User Password min 4" name="password" id="password" required minlength="4" maxlength="12" /><br><br>
 
 </div>
 </div>
