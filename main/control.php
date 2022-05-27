@@ -112,7 +112,6 @@ Model :: DAM MANAGEMENT System
 			
 			<td>
 
-        <a title="Click to view the WaterControl" href="viewcontrol.php?id=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
 			<a  href="#" id="<?php echo $row['id']; ?>" class="delbutton" title="Click To Delete"><button class="btn btn-danger btn-mini"><i class="icon-trash"></i> Delete</button></a></td>
 			</tr>
 			

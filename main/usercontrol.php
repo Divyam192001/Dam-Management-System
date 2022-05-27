@@ -111,7 +111,6 @@ Model :: DAM MANAGEMANT System
 			<td><?php echo $row['description']; ?></td>
 			<td><a title="Click to edit the WaterControl" href="editcontrol.php?id=<?php echo $row['id']; ?>"><button class="btn btn-success btn-mini"><i class="icon-edit"></i> Edit</button> </a>
 
-			<a title="Click to view the Control" href="usercontrolview.php?name=<?php echo $row['name']; ?>"><button class="btn btn-success btn-mini"><i class="icon-search"></i> View</button> </a>
 				</td>
 			
 			</tr>

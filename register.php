@@ -43,6 +43,8 @@ Model :: DAM MANAGEMENT SYSTEM
 minlength="10" maxlength="10" Required /><br><br>
 <span><font style="font:bold 20px 'Aleo'; color: 'black;">Username : </font></span><input type	="text" style="width:265px; height:30px;" placeholder="Username min 4" name="username" minlength="4" maxlength="12" required /><br><br>
 <span><font style="font:bold 20px 'Aleo'; color: 'black;">Password : </font></span><input type	="password" style="width:265px; height:30px;" placeholder="User Password min 4" name="password" id="password" required minlength="4" maxlength="12" /><br><br>
+<span><font style="font:bold 20px 'Aleo'; color: 'black;">Profile Pic:</font></span><input type="file" name="file" id="file"  ><br><br>
+
 
 </div>
 </div>

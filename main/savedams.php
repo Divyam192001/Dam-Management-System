@@ -16,16 +16,17 @@ $filepath = $file['tmp_name'];
 $fileerror = $file['error'];
 
 if($fileerror ==0){
-  $destfile = 'uploads/'.$filename;
+  $destfile = '../uploads/'.$filename;
   //echo "$destfile";
   move_uploaded_file($filepath, $destfile);
   $sql = "INSERT INTO dam (id,name,year,type,capacity,place,built,file) VALUES ('$a','$k','$b','$c','$d','$e','$f','$destfile')";
   $query = mysqli_query($con, $sql);
 if($query){
-  echo "Inserted";
+  header("location: dams.php");
+  //echo " Inserted";
 }else
 {
-  echo "Not insertedd";
+  echo "Image Not insertedd";
 }
 }
 

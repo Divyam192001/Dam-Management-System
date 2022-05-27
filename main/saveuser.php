@@ -7,6 +7,7 @@ $k = $_POST['name'];
 $b = $_POST['number'];
 $c = $_POST['username'];
 $d = $_POST['password'];
+$file = $_FILES['file'];
 // query
 
 //$file_name  = strtolower($_FILES['file']['name']);
@@ -20,12 +21,28 @@ $d = $_POST['password'];
     //if(@move_uploaded_file($_FILES['file']['tmp_name'], $path)) {
 
   //do your write to the database filename and other details   
-$sql = "INSERT INTO user (name,number,username,password) VALUES ('$k','$b','$c','$d')";
-mysqli_query($con, $sql);
+  $filename = $file['name'];
+$filepath = $file['tmp_name'];
+$fileerror = $file['error'];
+
+if($fileerror ==0){
+  $destfile = '../uploads/'.$filename;
+  //echo "$destfile";
+  move_uploaded_file($filepath, $destfile);
+$sql = "INSERT INTO user (name,number,username,password,file) VALUES ('$k','$b','$c','$d','$destfile')";
+$query = mysqli_query($con, $sql);
+if($query){
+  header("location: userview.php");
+  //echo " Inserted";
+}else
+{
+  echo "Image Not insertedd";
+}
+}
 
 //$q = $db->prepare($sql);
 //$q->execute(array(':k'=>$k,':b'=>$b,':c'=>$c,':d'=>$d,':h'=>$file_name_new));
-header("location: userview.php");
+//header("location: userview.php");
 
 	
 ?>
