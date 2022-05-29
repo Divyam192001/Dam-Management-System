@@ -50,7 +50,6 @@ Model :: DAM MANAGEMENT SYSTEM
 		<div class="qwe">
 		<button class="btn btn-large btn-primary btn-block pull-right" href="dashboard.html" name="submit" type="submit"><i class="icon-signin icon-large"></i> Login</button>
 </div>
-		 </form><button class="btn btn-primary "><a href="register.php"><i class="icon-signin icon-large"></i>User Register</a></button>
 		 <button class="btn btn-primary "><a href="index.php"><i class="icon-signin icon-large"></i>Admin Login</a></button>
 </div>
 </div>
